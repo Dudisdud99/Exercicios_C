@@ -1,17 +1,23 @@
 #include <stdio.h>
 
 int main(void) {
-  char letras[5][20];
-  for (int i = 0; i < 5; i++) {
-    printf("Digite o %d nome da sua lista: ", i + 1);
-    scanf("%s", &letras[i]);
+  int num[10][10], maior=0,linha,coluna;
+  for(int l=0; l<10; l++){
+    for(int c=0; c<10; c++){
+      printf("Digite a posicao %d da %d linha: ", c+1, l+1);
+      scanf("%d", &num[l][c]);
+    }
   }
-  for(int i=0; i<5; i++){
-    printf("%s\n",letras[i]);
+  for (int l = 0; l < 10; l++) {
+    for (int c = 0; c < 10; c++) {
+      if(num[l][c]>maior){
+        maior=num[l][c];
+        linha=l+1;
+        coluna=c+1;
+      }
+    }
   }
-  for(int i=4; i>=0; i--){
-    printf("%s\n",letras[i]);
-  }
+  printf("A posicao de maior valor esta na %d linha e %d coluna com o valor = %d",linha,coluna,maior);
   
   return 0;
 }
