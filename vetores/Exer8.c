@@ -1,4 +1,4 @@
-#include <stdio.h>
+ #include <stdio.h>
 
 int main(void) {
   int num[5][5],maior=0,soma=0;
