@@ -1,31 +1,35 @@
 #include <stdio.h>
 
 int main(void) {
-  int num[10],num2[10],x,rep=0,nrep=0;
-  for(int i=0; i<10; i++){
-    printf("Digite um numero inteiro: ");
-    scanf("%d",&num[i]);
-  }
-  for(int i=0; i<10; i++){
-    num2[i]=num[i];
-  }
-  printf("Os numeros");
-  for(int i=0; i<10; i++){
-    x=num[i];
-    for(int i2=0; i2<10; i2++){
-      if(x==num2[i2] && i!=i2){
-        printf(", %d",x);
-        rep++;
-      }
-      else{
-        nrep++;
-      }
+  int num[20][20],num2[20][20],rep[20][20],x;
+  printf("\nPrimeira matriz\n");
+  for(int l=0; l<20; l++){
+    for(int c=0; c<20; c++){
+      printf("Digite um numero inteiro pra posicao [%d][%d]: ",l,c);
+      scanf("%d",&num[l][c]);
     }
   }
-  if(nrep==100){
-    printf(" nao repetiram!");
-    return 0;
+  printf("\nSegunda matriz\n");
+  for(int l=0; l<20; l++){
+    for(int c=0; c<20; c++){
+      printf("Digite um numero inteiro pra posicao [%d][%d]: ",l,c);
+      scanf("%d ",&num2[l][c]);
+    }
   }
+  printf("\n");
+  for(int l=0; l<20; l++){
+    for(int c=0; c<20; c++){
+      for(int l2=0; l2<20; l2++){
+        for(int c2=0; c2<20; c2++){
+          if(num[l][c]==num2[l2][c2]){
+            printf("O valor na posicao [%d][%d] repitiu na posição [%d][%d] na segunda matriz\n",l,c,l2,c2);
+          }
+        }
+      }
+    
+    }
+  }
+
   printf(" repetiram!\nE ocorreram %d repeticoes",rep);
   return 0;
 }
