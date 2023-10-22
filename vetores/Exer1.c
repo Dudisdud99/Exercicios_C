@@ -11,7 +11,7 @@ int main(void) {
     num2[x] = num1[i2];
     x++;
   }
-l  for (int i3 = 0; i3 < 16; i3++) {
+  for (int i3 = 0; i3 < 16; i3++) {
     printf("%d ,", num2[i3]);
   }
   return 0;
