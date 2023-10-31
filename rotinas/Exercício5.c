@@ -1,8 +1,5 @@
 #include <stdio.h>
-#include "Exercício1.h"
-#include "Exercício2.h"
-#include "Exercício3.h"
-#include "Exercício4.h"
+#include "Exer1234.h"
 
 int main () {
   int a,b,acao;
