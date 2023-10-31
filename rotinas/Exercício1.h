@@ -3,7 +3,7 @@
 void troca (int a, int b) {
   int x;
   x=a;
-  b=a;
+  a=b;
   b=x;
-  printf("Agora os dois valores ja foram trocados");
+  printf("A = %d\nB = %d",a,b);
 }
