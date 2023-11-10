@@ -3,33 +3,30 @@
 
 int randon (){
   srand(time(NULL));
-  int x = (rand() % 100)+1;
-  printf("%d",x);
-  return x;
+  return (rand() % 100)+1;
 }
 
-int adivinhar (int x){
-  int ad, cont=0;
+int adivinhar (int x, int cont){
+  int ad;
   printf("Adivinhe o numero: ");
   scanf("%d",&ad);
   if(ad==x){
-    cont++;
-    printf("\nVoce acertou! com %d tentetivas\n",cont);
+    printf("\nVoce acertou! com %d tentetivas",cont);
   }
   else if(ad>x){
     printf("É menor!\n\n");
     cont++;
-    adivinhar(x);
+    adivinhar(x, cont);
   }
   else{
     printf("É maior!\n\n");
     cont++;
-    adivinhar(x);
+    adivinhar(x, cont);
   }
 }
 
 int main (){
-  int x;
+  int x,cont=1;
   x=randon();
-  adivinhar(x);
+  adivinhar(x,cont);
 }
