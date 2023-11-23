@@ -9,24 +9,28 @@ int veriSimb(char vet[20]){
       cont++;
     }
   }
-  if(cont<1){
+  if(cont==0){
     printf("Senha nao valida");
     main();
+  }
+  else{
+    printf("Senha valida");
+    return 0;
   }
 }
 
 int veriMin(char vet[20]){
   int tamanho = strlen(vet);
   if(tamanho<8){
-    printf("Senha nao valida");
+    printf("Senha nao valida\n");
     main();
   }
 }
 
 int main(void) {
   char vet[20];
-  scanf("%s%*c", &vet);
+  printf("Digite sua senha: ");
+  scanf("%s", &vet);
   veriMin(vet);
   veriSimb(vet);
 }
-// strchr
