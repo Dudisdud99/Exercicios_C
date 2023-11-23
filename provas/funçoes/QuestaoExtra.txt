@@ -1,0 +1,1 @@
+Resposta: Num procedimento é usado o tipo void e não tem um retorno
