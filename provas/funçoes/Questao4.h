@@ -14,6 +14,10 @@ int main4(void) {
   scanf("%d",&base);
   printf("Digite um numero para o expoente: ");
   scanf("%d",&expo);
+  if(expo==0){
+    printf("O resultado e 1");
+    continuar();
+  }
   res=potencia(base, expo);
   printf("O resultado e %d",res);
   continuar();

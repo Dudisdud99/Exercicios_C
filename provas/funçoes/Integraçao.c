@@ -33,6 +33,9 @@ int acoesMain() {
         printf("Iniciando Questao 5\n\n");
         main5();
     }
+    else{
+        printf("Seu otario");
+    }
 
     return 0;
 }
