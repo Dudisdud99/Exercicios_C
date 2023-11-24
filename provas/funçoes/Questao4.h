@@ -8,7 +8,7 @@ int potencia(int base, int expo){
   return pot;
 }
 
-int main(void) {
+int main4(void) {
   int base, expo, res;
   printf("Digite um numero para a base: ");
   scanf("%d",&base);
@@ -16,4 +16,5 @@ int main(void) {
   scanf("%d",&expo);
   res=potencia(base, expo);
   printf("O resultado e %d",res);
+  continuar();
 }

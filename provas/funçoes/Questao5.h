@@ -10,7 +10,7 @@ int veri(int vetor[7]){
   return menor;
 }
 
-int main(void) {
+int main5(void) {
   int vetor[7],res;
   for (int i = 0; i < 7; i++){
     printf("Digite um numero para a %d posicao: ",i+1);
@@ -18,4 +18,5 @@ int main(void) {
   }
   res=veri(vetor);
   printf("\no menor valor desta lista e o valor %d",res);
+  continuar();
 }

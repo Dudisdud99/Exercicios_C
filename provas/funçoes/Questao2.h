@@ -37,12 +37,14 @@ int acoes(int saldo){
     else if(acao==3){
         saque(saldo);
     }
-    else if(acao==1){
-        return 0;
+    else if(acao==4){
+        continuar();
     }
 }
 
-int main() {
-    int saldo=1000;
+int main2() {
+    int saldo;
+    printf("Digite seu saldo inicial: ");
+    scanf("%d",&saldo);
     acoes(saldo);
 }
