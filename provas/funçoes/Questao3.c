@@ -2,15 +2,14 @@
 #include <string.h>
 
 int veriSimb(char vet[20]){
-  int vet2[4]={"$","*","#","@"},posicao,cont=0;
+  int vet2[4]={'$','*','#','@'},cont=0;
   for (int i = 0; i < 4; i++){
-    posicao = strchr (vet, vet[i]);
-    if(posicao != " "){
+    if(strchr(vet, vet2[i]) != NULL){
       cont++;
     }
   }
   if(cont==0){
-    printf("Senha nao valida");
+    printf("Senha nao valida\n\n");
     main();
   }
   else{
@@ -22,15 +21,18 @@ int veriSimb(char vet[20]){
 int veriMin(char vet[20]){
   int tamanho = strlen(vet);
   if(tamanho<8){
-    printf("Senha nao valida\n");
+    printf("Senha nao valida\n\n");
     main();
+  }
+  else{
+    veriSimb(vet);
   }
 }
 
-int main(void) {
+int main() {
   char vet[20];
   printf("Digite sua senha: ");
   scanf("%s", &vet);
   veriMin(vet);
-  veriSimb(vet);
+  return 0;
 }

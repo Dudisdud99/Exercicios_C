@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int veriSaldo(int saldo){
-    printf("\nSeu saldo e: %d",saldo);
+    printf("\nSeu saldo e: %d\n",saldo);
     acoes(saldo);
 }
 
@@ -9,7 +9,6 @@ int dep(int saldo){
     int novo=0;
     printf("\nDeseja depositar quanto: ");
     scanf("%d",&novo);
-    printf("\n");
     saldo = saldo+novo;
     acoes(saldo);
 }
@@ -18,7 +17,6 @@ int saque(int saldo){
     int novo=0;
     printf("\nDeseja sacar quanto: ");
     scanf("%d",&novo);
-    printf("\n");
     saldo = saldo-novo;
     acoes(saldo);
 }
