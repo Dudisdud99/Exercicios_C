@@ -8,7 +8,7 @@
 int acoesMain() {
     int acao;
     printf("\nDigite o numero da questao: \n");
-    printf("1-Maior numero\n2-Caixa\n3-Senha\n4-Potencia\n");
+    printf("1-Maior numero\n2-Caixa\n3-Senha\n4-Potencia\n5-Menor num\n");
     printf("Sua acao: ");
     scanf("%d",&acao);
     printf("\n");
@@ -29,7 +29,7 @@ int acoesMain() {
         printf("Iniciando Questao 4\n\n");
         main4();
     }
-    else if(acao==4){
+    else if(acao==5){
         printf("Iniciando Questao 5\n\n");
         main5();
     }
